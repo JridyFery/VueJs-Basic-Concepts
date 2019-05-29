@@ -16,7 +16,6 @@ new Vue({
             this.health=100;
             this.ended=false;
         }
-        
     },
     computed: {
         

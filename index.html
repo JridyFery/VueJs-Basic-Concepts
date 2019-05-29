@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My first vue app</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/vue"></script>
+   
+</head>
+<body>
+    <div id="new-app1">
+        <h1> Data Binding</h1>
+        <p>name: {{name}} </p>
+        <p> job:  {{job}} </p>
+        <a v-bind:href= "website"> my github </a>
+        <br>
+        <p>I am: <input type="text" v-bind:value="name+' '+job"> </p>
+        <p v-html="websiteTag"></p>
+    </div>
+
+    <div id="new-app2">
+        <h1>Mouse  Events </h1>
+        <button @click="add(1)">Add a year</button>
+        <button v-on:click="subtract(1)"> Subtract a year</button>
+        <br>
+        <button @dblclick="add(10)"> add 10 years</button>
+        <button v-on:dblclick="subtract(10)"> subtract 10 years</button>
+        <p> age: {{age}} </p>
+    <div id="canvas" @mousemove="updateXY">
+        {{x}},{{y}}
+        </div>
+    </div>
+
+    <div id="new-app3">
+        <h1> keyboard events</h1>
+        <label> name:</label>
+        <input type="text" v-model="name" />
+        <span>{{name}} </span>
+    </br>
+        <label> Age:</label>
+        <input type="text" v-model="age" />
+        <span>{{age}} </span>
+
+    </div>
+    <DIV id='new-app4'>
+        <h1>Dynamic CSS</h1>
+        <h3> Exemple 1</h3>
+        <div v-on:click="available=!available" v-bind:class="{available:available}">
+            <span>Click to change availability </span>
+        </div>
+       
+        <h3>Exemple 2</h3>
+
+        <button v-on:click="available=!available">Toggle available</button>
+        <button v-on:click="nearby=!nearby ">Toggle nearby</button>
+        <div v-bind:class="compClasses">
+            <span>Click to change availability </span>
+        </div>
+        
+    </DIV>
+    <script src="app.js"></script>
+</body>
+</html>

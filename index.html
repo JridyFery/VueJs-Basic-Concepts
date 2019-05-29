@@ -67,6 +67,19 @@
         <p v-show="error"> There has been an error !</p>
         <p v-show="success"> Congrats! </p>
     </div>
+    <div id="new-app6">
+        <h1>Loops with HTML lists</h1>
+        <ul>
+            <li v-for="(character,index) in Characters">{{index}}.{{character}}</li>
+        </ul>
+        <ul>
+            <li v-for="(Bestie,index) in Besties">{{index}}.{{Bestie.name}}-{{Bestie.age}}</li>   
+        </ul>
+        <template v-for="(Bestie,index) in Besties"> <h3>{{index}}.{{Bestie.name}} </h3> <p>{{Bestie.age}} </p> </template>
+        <template v-for="Bestie in besties">
+        </template>
+    </div>
+    
     <script src="app.js"></script>
 </body>
 </html>

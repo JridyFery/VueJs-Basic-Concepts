@@ -75,3 +75,20 @@ new Vue({
         error:false
     }
 })
+new Vue({
+    el:'#new-app6',
+    data:{
+        Characters:
+        ['Rose','Faouz','Zahra','Wiwi'],
+        Besties:
+        [{name:'Wiwi',age:25},
+        {name:'Faouz',age:21},
+        {name:'Rose',age:20}]
+    },
+    methods:{
+
+    },
+    computed:{
+
+    }
+})

@@ -68,3 +68,10 @@ new Vue({
 
     }
 })
+new Vue({
+    el:'#new-app5',
+    data:{
+        success:false,
+        error:false
+    }
+})

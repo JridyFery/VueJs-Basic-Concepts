@@ -10,11 +10,18 @@
     
 </head>
 <body>
-    <script src="app.js"></script>
+    <script src="Application.js"></script>
     <div id="vue-app">
-        <div id=""></div>
-        <div></div>
-        <div></div>
+        <div id="bag">
+
+        </div>
+        <div id="bag-health">
+            <div v-bind:style="{width:health + '%'}"></div>
+        </div>
+        <div id="control">
+            <button v-on:click="punch()" v-show="!ended">punch</button>
+            <button v-on:click="restart()">Restart</button>
+        </div>
     </div>
 </body>
 </html>

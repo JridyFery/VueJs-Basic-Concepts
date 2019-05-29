@@ -64,8 +64,8 @@
         <h1> Conditions with VueJs</h1>
         <button v-on:click="success=!success"> Toggle Success </button>
         <button v-on:click="error=!error"> Toggle Error </button>
-        <p v-if="error"> There has been an error !</p>
-        <p v-if="success"> Congrats! </p>
+        <p v-show="error"> There has been an error !</p>
+        <p v-show="success"> Congrats! </p>
     </div>
     <script src="app.js"></script>
 </body>
